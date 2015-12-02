@@ -30,7 +30,7 @@
 - (void)createTimePicker{
     self.pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 260)];
     
-    WMCustomDatePicker *picker = [[WMCustomDatePicker alloc]initWithframe:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 214) Delegate:self PickerStyle:WMDateStyle_YearMonthDay];
+    WMCustomDatePicker *picker = [[WMCustomDatePicker alloc]initWithframe:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 214) Delegate:self PickerStyle:WMDateStyle_DayHourMinute];
     picker.minLimitDate = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
@@ -93,7 +93,6 @@
 
 - (void)finishDidSelectDatePicker:(WMCustomDatePicker *)datePicker date:(NSDate *)date
 {
-    NSLog(@"%@_____formatterDate == %@",date,[self dateFromString:date withFormat:@"yyyy-MM-dd HH:mm"]);
     if ([date compare:[NSDate date]] == NSOrderedDescending) {
         self.timeStr = [self dateFromString:date withFormat:@"yyyy-MM-dd HH:mm"];
     }

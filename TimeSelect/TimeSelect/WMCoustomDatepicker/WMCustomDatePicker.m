@@ -912,155 +912,155 @@
 }
 - (UIColor *)returnHourColorRow:(NSInteger)row
 {
-    return DATE_BLACK;
-//    NSDate *dateShow = [NSDate date];
-//    WMDatepicker_DateModel *model = [[WMDatepicker_DateModel alloc]initWithDate:dateShow];
-//    if ([model.minute intValue] >= 50 && row == [model.hour intValue] && dayIndex == 0) {
-//        return DATE_GRAY;
-//    }
-//    if ([yearArray[yearIndex] intValue] < [minDateModel.year intValue] || [yearArray[yearIndex] intValue] > [maxDateModel.year intValue]) {
-//        return DATE_GRAY;
-//    }else if([yearArray[yearIndex] intValue] > [minDateModel.year intValue] && [yearArray[yearIndex] intValue] < [maxDateModel.year intValue]){
-//        return DATE_BLACK;
-//    }else if ([minDateModel.year intValue]==[maxDateModel.year intValue]){
-//        if ([monthArray[monthIndex] intValue] > [minDateModel.month intValue] && [monthArray[monthIndex] intValue] < [maxDateModel.month intValue]) {
-//            return DATE_GRAY;
-////            return DATE_BLACK;
-//        }else if ([minDateModel.month intValue]==[maxDateModel.month intValue]){
-//            if ([dayArray[dayIndex] intValue] > [minDateModel.day intValue] && [dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
-//                return DATE_BLACK;
-//            }else if ([minDateModel.day intValue]==[maxDateModel.day intValue]){
-//                if ([hourArray[row] intValue] >= [minDateModel.hour intValue] && [hourArray[row] intValue] <= [maxDateModel.hour intValue]) {
-//                    return DATE_BLACK;
-//                }else {
-//                    return DATE_GRAY;
-//                }
-//            }else{
-//                return DATE_GRAY;
-//            }
-//        }else {
-//            return DATE_GRAY;
-//        }
-//    }else if ([yearArray[yearIndex] intValue] == [minDateModel.year intValue]){
-//        if ([monthArray[monthIndex] intValue] < [minDateModel.month intValue]) {
-//            return DATE_GRAY;
-//        }else if([monthArray[monthIndex] intValue] == [minDateModel.month intValue]){
-//            if ([dayArray[dayIndex] intValue] < [minDateModel.day intValue]) {
-//                return DATE_GRAY;
-//            }else if ([dayArray[dayIndex] intValue] == [minDateModel.day intValue]){
-//                if ([hourArray[row] intValue] < [minDateModel.hour intValue]) {
-//                    return DATE_GRAY;
-//                }else{
-//                    return DATE_BLACK;
-//                }
-//            }else{
-//                return DATE_BLACK;
-//            }
-//        }else{
+//    return DATE_BLACK;
+    NSDate *dateShow = [NSDate date];
+    WMDatepicker_DateModel *model = [[WMDatepicker_DateModel alloc]initWithDate:dateShow];
+    if ([model.minute intValue] >= 50 && row == [model.hour intValue] && dayIndex == 0) {
+        return DATE_GRAY;
+    }
+    if ([_yearArray[yearIndex] intValue] < [minDateModel.year intValue] || [_yearArray[yearIndex] intValue] > [maxDateModel.year intValue]) {
+        return DATE_GRAY;
+    }else if([_yearArray[yearIndex] intValue] > [minDateModel.year intValue] && [_yearArray[yearIndex] intValue] < [maxDateModel.year intValue]){
+        return DATE_BLACK;
+    }else if ([minDateModel.year intValue]==[maxDateModel.year intValue]){
+        if ([_monthArray[monthIndex] intValue] > [minDateModel.month intValue] && [_monthArray[monthIndex] intValue] < [maxDateModel.month intValue]) {
+            return DATE_GRAY;
 //            return DATE_BLACK;
-//        }
-//    }else {
-//        if ([monthArray[monthIndex] intValue] > [maxDateModel.month intValue]) {
-//            return DATE_GRAY;
-//        }else if([monthArray[monthIndex] intValue] == [maxDateModel.month intValue]){
-//            if ([dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
-//                return DATE_BLACK;
-//            }else if ([dayArray[dayIndex] intValue] == [maxDateModel.day intValue]){
-//                if ([hourArray[row] intValue] > [maxDateModel.hour intValue]) {
-//                    return DATE_GRAY;
-//                }else{
-//                    return DATE_BLACK;
-//                }
-//            }else{
-//                return DATE_BLACK;
-//            }
-//        }else{
-//            return DATE_BLACK;
-//        }
-//    }
+        }else if ([minDateModel.month intValue]==[maxDateModel.month intValue]){
+            if ([_dayArray[dayIndex] intValue] > [minDateModel.day intValue] && [_dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
+                return DATE_BLACK;
+            }else if ([minDateModel.day intValue]==[maxDateModel.day intValue]){
+                if ([_hourArray[row] intValue] >= [minDateModel.hour intValue] && [_hourArray[row] intValue] <= [maxDateModel.hour intValue]) {
+                    return DATE_BLACK;
+                }else {
+                    return DATE_GRAY;
+                }
+            }else{
+                return DATE_GRAY;
+            }
+        }else {
+            return DATE_GRAY;
+        }
+    }else if ([_yearArray[yearIndex] intValue] == [minDateModel.year intValue]){
+        if ([_monthArray[monthIndex] intValue] < [minDateModel.month intValue]) {
+            return DATE_GRAY;
+        }else if([_monthArray[monthIndex] intValue] == [minDateModel.month intValue]){
+            if ([_dayArray[dayIndex] intValue] < [minDateModel.day intValue]) {
+                return DATE_GRAY;
+            }else if ([_dayArray[dayIndex] intValue] == [minDateModel.day intValue]){
+                if ([_hourArray[row] intValue] < [minDateModel.hour intValue]) {
+                    return DATE_GRAY;
+                }else{
+                    return DATE_BLACK;
+                }
+            }else{
+                return DATE_BLACK;
+            }
+        }else{
+            return DATE_BLACK;
+        }
+    }else {
+        if ([_monthArray[monthIndex] intValue] > [maxDateModel.month intValue]) {
+            return DATE_GRAY;
+        }else if([_monthArray[monthIndex] intValue] == [maxDateModel.month intValue]){
+            if ([_dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
+                return DATE_BLACK;
+            }else if ([_dayArray[dayIndex] intValue] == [maxDateModel.day intValue]){
+                if ([_hourArray[row] intValue] > [maxDateModel.hour intValue]) {
+                    return DATE_GRAY;
+                }else{
+                    return DATE_BLACK;
+                }
+            }else{
+                return DATE_BLACK;
+            }
+        }else{
+            return DATE_BLACK;
+        }
+    }
 }
 - (UIColor *)returnMinuteColorRow:(NSInteger)row
 {
-    return DATE_BLACK;
-//    if ([yearArray[yearIndex] intValue] < [minDateModel.year intValue] || [yearArray[yearIndex] intValue] > [maxDateModel.year intValue]) {
-//        return DATE_GRAY;
-//    }else if([yearArray[yearIndex] intValue] > [minDateModel.year intValue] && [yearArray[yearIndex] intValue] < [maxDateModel.year intValue]){
-//        return DATE_BLACK;
-//    }else if ([minDateModel.year intValue]==[maxDateModel.year intValue]){
-//        if ([monthArray[monthIndex] intValue] > [minDateModel.month intValue] && [monthArray[monthIndex] intValue] < [maxDateModel.month intValue]) {
-//            return DATE_BLACK;
-//        }else if ([minDateModel.month intValue]==[maxDateModel.month intValue]){
-//            if ([dayArray[dayIndex] intValue] > [minDateModel.day intValue] && [dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
-//                return DATE_BLACK;
-//            }else if ([minDateModel.day intValue]==[maxDateModel.day intValue]){
-//                if ([hourArray[hourIndex] intValue] > [minDateModel.hour intValue] && [hourArray[hourIndex] intValue] < [maxDateModel.hour intValue]) {
-//                    return DATE_BLACK;
-//                }else if ([minDateModel.hour intValue]==[maxDateModel.hour intValue]){
-//                    if ([minuteArray[row] intValue] <= [maxDateModel.minute intValue] &&[minuteArray[row] intValue] >= [minDateModel.minute intValue]) {
-//                        return DATE_BLACK;
-//                    }else{
-//                        return DATE_GRAY;
-//                    }
-//                }else{
-//                    return DATE_GRAY;
-//                }
-//            }else{
-//                return DATE_GRAY;
-//            }
-//        }else {
-//            return DATE_GRAY;
-//        }
-//    }else if ([yearArray[yearIndex] intValue] == [minDateModel.year intValue]){
-//        if ([monthArray[monthIndex] intValue] < [minDateModel.month intValue]) {
-//            return DATE_GRAY;
-//        }else if([monthArray[monthIndex] intValue] == [minDateModel.month intValue]){
-//            if ([dayArray[dayIndex] intValue] < [minDateModel.day intValue]) {
-//                return DATE_GRAY;
-//            }else if ([dayArray[dayIndex] intValue] == [minDateModel.day intValue]){
-//                if ([hourArray[hourIndex] intValue] < [minDateModel.hour intValue]) {
-//                    return DATE_GRAY;
-//                }else if ([hourArray[hourIndex] intValue] == [minDateModel.hour intValue]){
-//                    if ([minuteArray[row] intValue] < [minDateModel.minute intValue]) {
-//                        return DATE_GRAY;
-//                    }else{
-//                        return DATE_BLACK;
-//                    }
-//                }else{
-//                    return DATE_BLACK;
-//                }
-//            }else{
-//                return DATE_BLACK;
-//            }
-//        }else{
-//            return DATE_BLACK;
-//        }
-//    }else{
-//        if ([monthArray[monthIndex] intValue] > [maxDateModel.month intValue]) {
-//            return DATE_GRAY;
-//        }else if([monthArray[monthIndex] intValue] == [maxDateModel.month intValue]){
-//            if ([dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
-//                return DATE_BLACK;
-//            }else if ([dayArray[dayIndex] intValue] == [maxDateModel.day intValue]){
-//                if ([hourArray[hourIndex] intValue] > [maxDateModel.hour intValue]) {
-//                    return DATE_GRAY;
-//                }else if([hourArray[hourIndex] intValue] == [maxDateModel.hour intValue]){
-//                    if ([minuteArray[row] intValue] <= [maxDateModel.minute intValue]) {
-//                        return DATE_BLACK;
-//                    }else{
-//                        return DATE_GRAY;
-//                    }
-//                }else{
-//                    return DATE_BLACK;
-//                }
-//                
-//                
-//            }else{
-//                return DATE_BLACK;
-//            }
-//        }else{
-//            return DATE_BLACK;
-//        }
-//    }
+//    return DATE_BLACK;
+    if ([_yearArray[yearIndex] intValue] < [minDateModel.year intValue] || [_yearArray[yearIndex] intValue] > [maxDateModel.year intValue]) {
+        return DATE_GRAY;
+    }else if([_yearArray[yearIndex] intValue] > [minDateModel.year intValue] && [_yearArray[yearIndex] intValue] < [maxDateModel.year intValue]){
+        return DATE_BLACK;
+    }else if ([minDateModel.year intValue]==[maxDateModel.year intValue]){
+        if ([_monthArray[monthIndex] intValue] > [minDateModel.month intValue] && [_monthArray[monthIndex] intValue] < [maxDateModel.month intValue]) {
+            return DATE_BLACK;
+        }else if ([minDateModel.month intValue]==[maxDateModel.month intValue]){
+            if ([_dayArray[dayIndex] intValue] > [minDateModel.day intValue] && [_dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
+                return DATE_BLACK;
+            }else if ([minDateModel.day intValue]==[maxDateModel.day intValue]){
+                if ([_hourArray[hourIndex] intValue] > [minDateModel.hour intValue] && [_hourArray[hourIndex] intValue] < [maxDateModel.hour intValue]) {
+                    return DATE_BLACK;
+                }else if ([minDateModel.hour intValue]==[maxDateModel.hour intValue]){
+                    if ([_minuteArray[row] intValue] <= [maxDateModel.minute intValue] &&[_minuteArray[row] intValue] >= [minDateModel.minute intValue]) {
+                        return DATE_BLACK;
+                    }else{
+                        return DATE_GRAY;
+                    }
+                }else{
+                    return DATE_GRAY;
+                }
+            }else{
+                return DATE_GRAY;
+            }
+        }else {
+            return DATE_GRAY;
+        }
+    }else if ([_yearArray[yearIndex] intValue] == [minDateModel.year intValue]){
+        if ([_monthArray[monthIndex] intValue] < [minDateModel.month intValue]) {
+            return DATE_GRAY;
+        }else if([_monthArray[monthIndex] intValue] == [minDateModel.month intValue]){
+            if ([_dayArray[dayIndex] intValue] < [minDateModel.day intValue]) {
+                return DATE_GRAY;
+            }else if ([_dayArray[dayIndex] intValue] == [minDateModel.day intValue]){
+                if ([_hourArray[hourIndex] intValue] < [minDateModel.hour intValue]) {
+                    return DATE_GRAY;
+                }else if ([_hourArray[hourIndex] intValue] == [minDateModel.hour intValue]){
+                    if ([_minuteArray[row] intValue] < [minDateModel.minute intValue]) {
+                        return DATE_GRAY;
+                    }else{
+                        return DATE_BLACK;
+                    }
+                }else{
+                    return DATE_BLACK;
+                }
+            }else{
+                return DATE_BLACK;
+            }
+        }else{
+            return DATE_BLACK;
+        }
+    }else{
+        if ([_monthArray[monthIndex] intValue] > [maxDateModel.month intValue]) {
+            return DATE_GRAY;
+        }else if([_monthArray[monthIndex] intValue] == [maxDateModel.month intValue]){
+            if ([_dayArray[dayIndex] intValue] < [maxDateModel.day intValue]) {
+                return DATE_BLACK;
+            }else if ([_dayArray[dayIndex] intValue] == [maxDateModel.day intValue]){
+                if ([_hourArray[hourIndex] intValue] > [maxDateModel.hour intValue]) {
+                    return DATE_GRAY;
+                }else if([_hourArray[hourIndex] intValue] == [maxDateModel.hour intValue]){
+                    if ([_minuteArray[row] intValue] <= [maxDateModel.minute intValue]) {
+                        return DATE_BLACK;
+                    }else{
+                        return DATE_GRAY;
+                    }
+                }else{
+                    return DATE_BLACK;
+                }
+                
+                
+            }else{
+                return DATE_BLACK;
+            }
+        }else{
+            return DATE_BLACK;
+        }
+    }
 }
 
 
