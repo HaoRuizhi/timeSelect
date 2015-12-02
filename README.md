@@ -3,6 +3,9 @@
 
 //效果图
 ![](https://github.com/HaoRuizhi/timeSelect/blob/master/TimeSelect/时间选择.gif)
+
+
+
 使用方法：
 WMCustomDatePicker *picker = [[WMCustomDatePicker alloc]initWithframe:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 214) Delegate:self PickerStyle:WMDateStyle_DayHourMinute];
 picker.minLimitDate = [NSDate date];
