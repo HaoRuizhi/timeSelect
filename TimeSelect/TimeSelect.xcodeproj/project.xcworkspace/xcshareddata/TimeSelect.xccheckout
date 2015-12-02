@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CE738B47-025E-499D-9778-DF7373234433</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TimeSelect</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>35BE807C-E30E-4982-B19B-C084E27AAA38</key>
+		<string>ssh://github.com/HaoRuizhi/workSpace.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TimeSelect.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>35BE807C-E30E-4982-B19B-C084E27AAA38</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/HaoRuizhi/workSpace.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>35BE807C-E30E-4982-B19B-C084E27AAA38</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>35BE807C-E30E-4982-B19B-C084E27AAA38</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TimeSelect</string>
+		</dict>
+	</array>
+</dict>
+</plist>
