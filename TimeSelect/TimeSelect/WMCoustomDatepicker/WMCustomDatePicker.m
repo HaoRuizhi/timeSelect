@@ -16,7 +16,7 @@
 #define DATEPICKER_HOUR 24
 #define DATEPICKER_MINUTE 60
 
-#define DATEPICKER_interval 1//设置分钟时间间隔
+#define DATEPICKER_interval 5//设置分钟时间间隔
 #define DATEMAXFONT 20 //修改最大的文字大小
 #define MINUTEADD 0 //让起始时间在目前时间基础上增加的分钟数
 
